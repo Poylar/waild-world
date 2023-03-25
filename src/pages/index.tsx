@@ -156,7 +156,7 @@ const Home: React.FC<Response> = ({ data }) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const data = await fetcher(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}/api/tools`);
 
   return {
