@@ -1,10 +1,10 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import React from 'react';
 
 import Layout from '@/components/layout/layout';
-import useTools from '@/hooks/useToolsList';
+// import useTools from '@/hooks/useToolsList';
 import fetcher from '@/lib/fetcher';
-import Image from 'next/image';
 
 interface Category {
   id: number;
