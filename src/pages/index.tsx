@@ -95,7 +95,7 @@ interface Data {
     updatedAt: string;
     publishedAt: string;
     locale: string;
-    Image: Image;
+    image: Image;
     categories: {
       data: Category[];
     };
@@ -131,18 +131,18 @@ const Home: React.FC<Response> = ({ data }) => {
       </Head>
       <div>
         {data.data.map((item, index) => {
-          console.log(item.attributes.Image);
+          console.log(item.attributes.image);
           return (
             <div key={index}>
-              {item.attributes.Image.data && item.attributes.Image.data.attributes && (
+              {item.attributes.image.data && item.attributes.image.data.attributes && (
                 <div key={index}>
                   {item.attributes.Name}
                   <Image
-                    width={item.attributes.Image.data.attributes.width}
-                    height={item.attributes.Image.data.attributes.height}
+                    width={item.attributes.image.data.attributes.width}
+                    height={item.attributes.image.data.attributes.height}
                     src={
                       `${process.env.NEXT_PUBLIC_BACKEND_API_URL}` +
-                      item.attributes.Image.data.attributes.url
+                      item.attributes.image.data.attributes.url
                     }
                     alt=""
                   />
