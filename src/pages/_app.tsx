@@ -3,7 +3,6 @@ import 'the-new-css-reset/css/reset.css';
 import type { AppProps } from 'next/app';
 import { Inter } from 'next/font/google';
 import React from 'react';
-import { createGlobalStyle } from 'styled-components';
 
 const inter = Inter({
   variable: '--font-inter',

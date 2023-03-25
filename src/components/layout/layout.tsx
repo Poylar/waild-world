@@ -17,7 +17,7 @@ function Layout({ children }: Props) {
   useEffect(() => {
     const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
     themeChange(darkModeQuery ? 'dark' : 'light');
-  }, []);
+  }, [themeChange]);
 
   const GlobalStyle = createGlobalStyle`
     body {
